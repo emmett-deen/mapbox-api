@@ -841,9 +841,14 @@ class NavigationInstructionPropertyComponent {
             switch (direction as String) {
               case 'right':
                 return NavigationDirection.RIGHT;
+              case 'straight':
+                return NavigationDirection.STRAIGHT;
+              case 'left':
+                return NavigationDirection.LEFT;
             }
 
-            return NavigationDirection.LEFT;
+            print('Unknown direction: $direction');
+            return NavigationDirection.STRAIGHT;
           },
         ),
       );
